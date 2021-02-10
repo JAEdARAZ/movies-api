@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import com.jaedaraz.moviesapi.entity.Movie;
+
 @RestController
 @RequestMapping("/api")
 public class MovieRestController {
@@ -19,14 +21,15 @@ public class MovieRestController {
 	private WebClient.Builder webClientBuilder;
 	
 	@GetMapping("/movies/{movieTitle}")
-	public String getMovieByName(@PathVariable String movieTitle) {
-		String responseJson = webClientBuilder.build()
+	public Movie getMovieByName(@PathVariable String movieTitle) {
+		Movie movie = webClientBuilder.build()
 				.get()
-				.uri("https://api.themoviedb.org/3/search/movie?api_key=" + apiKey + "&query=" + movieTitle)
+				//.uri("https://api.themoviedb.org/3/search/movie?api_key=" + apiKey + "&query=" + movieTitle)
+				.uri("https://api.themoviedb.org/3/movie/343611?api_key=" + apiKey)
 				.retrieve()
-				.bodyToMono(String.class)
+				.bodyToMono(Movie.class)
 				.block();
 		
-		return responseJson;
+		return movie;
 	}
 }
