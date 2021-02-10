@@ -7,6 +7,7 @@ Crear el archivo application.properties en (/src/main/resources/application.prop
 incluir: api.key=###
 
 ./mvnw package
+
 java -jar app.jar
 
 user:password - admin:admin123
