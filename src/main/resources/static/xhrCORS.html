@@ -9,7 +9,8 @@
                 const client = new XMLHttpRequest();
 
                 client.responseType="json";
-                client.open("GET", "http://localhost:8080/api/movies/jack reacher");
+                client.open("GET", "http://localhost:8080/api/movies?movieTitle=jack reacher");
+                client.setRequestHeader("Authorization", "Basic " + btoa("admin:admin123"));
                 client.send();
                 
                 client.onload  = function() {

@@ -28,6 +28,7 @@ public class MovieRestController {
 	@Autowired
 	private ObjectMapper objectMapper;
 	
+	
 	@GetMapping("/movies")
 	public List<Movie> getMovieByName(@RequestParam("movieTitle") String movieTitle) {
 		String responseJson = webClientBuilder.build()
