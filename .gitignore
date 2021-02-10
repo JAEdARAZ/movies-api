@@ -12,6 +12,3 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
-# ignore application properties
-src/main/resources/application.properties
