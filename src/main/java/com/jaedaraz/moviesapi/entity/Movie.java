@@ -20,7 +20,7 @@ public class Movie {
 		
 	}
 
-	public Movie(String title, String overview, String homepage, String releaseDate) {
+	public Movie(String title, String overview, String releaseDate) {
 		this.title = title;
 		this.overview = overview;
 		this.releaseDate = releaseDate;
