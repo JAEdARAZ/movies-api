@@ -1,4 +1,4 @@
-package com.jaedaraz.moviesapi.moviesapi;
+package com.jaedaraz.moviesapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
