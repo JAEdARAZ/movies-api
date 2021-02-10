@@ -12,9 +12,6 @@ public class Movie {
 	@JsonProperty("overview")
 	private String overview;
 	
-	@JsonProperty("homepage")
-	private String homepage;
-	
 	@JsonProperty("release_date")
 	private String releaseDate;
 	
@@ -26,7 +23,6 @@ public class Movie {
 	public Movie(String title, String overview, String homepage, String releaseDate) {
 		this.title = title;
 		this.overview = overview;
-		this.homepage = homepage;
 		this.releaseDate = releaseDate;
 	}
 
@@ -44,14 +40,6 @@ public class Movie {
 
 	public void setOverview(String overview) {
 		this.overview = overview;
-	}
-
-	public String getHomepage() {
-		return homepage;
-	}
-
-	public void setHomepage(String homepage) {
-		this.homepage = homepage;
 	}
 
 	public String getReleaseDate() {
