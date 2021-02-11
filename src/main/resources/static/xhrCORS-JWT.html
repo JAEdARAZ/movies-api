@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>XHR test - JWT</title>
+        <script type='text/javascript'>
+            function main() {
+                const client = new XMLHttpRequest();
+
+                client.responseType="json";
+                client.open("GET", "http://localhost:8080/api/movies?movieTitle=jack reacher");
+                
+                var jwt = "";
+                client.setRequestHeader("Authorization", "Bearer ".concat(jwt));
+                
+                client.send();
+                
+                client.onload  = function() {
+                    console.log(client.response);
+                };
+            }
+        </script>
+    </head>
+ 
+    <body onLoad='main();'>
+
+    </body>
+
+</html>
