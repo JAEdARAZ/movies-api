@@ -7,8 +7,8 @@ git clone https://github.com/JAEdARAZ/movies-api.git
 ./mvnw spring-boot:run -Dspring-boot.run.arguments=--api.key=###
 ```
 ```
-user: admin
-password :admin123
+user:admin
+password:admin123
 ```
 
 ## Example
